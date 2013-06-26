@@ -8,4 +8,9 @@ sub index {
     $c->render('index.tt');
 }
 
+sub rakugaki {
+    my ($class, $c) = @_;
+    $c->render('rakugaki.tt');
+}
+
 1;

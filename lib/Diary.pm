@@ -31,19 +31,15 @@ sub db {
     if ( !defined $self->{db} ) {
         my $conf = $self->config->{'DBI'}
         or die "missing configuration for 'DBI'";
-        my $dbh = DBI->connect(@{$conf});
-        if ( !defined $schema ) {
-            $self->{db} = Teng::Schema::Loader->load(
-                namespace => 'Diary::DB',
-                dbh       => $dbh,
-	    );
-            $schema = $self->{db}->schema;
-        } else {
-            $self->{db} = Diary::DB->new(
-                dbh    => $dbh,
-                schema => $schema,
-	    );
-        }
+        my $dbh = $self->dbh;
+        $self->{db} = Teng::Schema::Loader->load(
+            namespace => 'Diary::DB',
+            dbh       => $dbh,
+        );
+        # $self->{db} = Diary::DB->new(
+        #     dbh    => $dbh,
+        #     schema => $schema,
+        # );
     }
     return $self->{db};
 }

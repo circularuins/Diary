@@ -1,0 +1,8 @@
+[% WRAPPER 'include/layout.tt' %]
+
+<marquee behavior="scroll" scrollamount="15" scrolldelay="85" loop="100">
+  <font size="10" color="LIGHTBLUE">⊂(^ω^⊂⌒｀つ</font>
+  <font size="10" color="deeppink">≡≡≡≡≡≡≡≡≡≡;</font>
+</marquee>
+
+[% END %]
