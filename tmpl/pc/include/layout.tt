@@ -29,7 +29,7 @@
                 <a class="brand" href="/">heaven</a>
                 <div class="nav-collapse">
                     <ul class="nav">
-                        <li class="active"><a href="/entry/show">Diary</a></li>
+                        <li class="active"><a href="/entry/show_all">Diary</a></li>
                         <li class="divider-vertical"></li>
                         <li><a href="/auth/login">Login</a></li>
                         <li><a href="/rakugaki">落書き</a></li>
