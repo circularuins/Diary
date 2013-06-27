@@ -36,7 +36,7 @@ sub show_all {
         push(@months, $tmp);
     }
 
-    $c->render('entry.tt', { entries => $entries, pager => $pager, years => \@years, months => \@months });
+    $c->render('entry_all.tt', { entries => $entries, pager => $pager, years => \@years, months => \@months });
 }
 
 sub show_month {
@@ -53,12 +53,11 @@ sub show_month {
     else {
         $epock_to = timelocal(0, 0, 0, 1, $month + 1, $year) - 1;
     }
-    print Dumper $epoch_from;
-    print Dumper $epock_to;
-    # dbから期間指定でsearch
-    # サイドバーのないentry_month.ttを作る？
 
-    $c->render('login.tt');
+    my $page = $c->req->param('page') || 1;
+    my ($entries, $pager) = $c->db->search_with_pager('entry', ['ctime',{'between' => [$epoch_from,$epock_to]}], {order_by => 'ctime DESC', page => $page, rows => 5});
+
+    $c->render('entry_month.tt', { entries => $entries, pager => $pager });
 }
 
 1;
