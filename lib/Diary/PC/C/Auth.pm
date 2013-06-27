@@ -14,7 +14,7 @@ sub check_login {
     my $user = $c->request->param('login_user');
     my $pass = $c->request->param('login_password');
     my @user_tbls = $c->db->search('user_tbl');
-    $c->render('post_entry.tt', { user_tbls => \@user_tbls, user => $user, pass => $pass });
+    $c->render('diary/post_entry.tt', { user_tbls => \@user_tbls, user => $user, pass => $pass });
 }
 
 1;

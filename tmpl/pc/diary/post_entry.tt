@@ -1,0 +1,17 @@
+[% WRAPPER 'include/layout.tt' %]
+
+[% FOR user_tbl IN user_tbls %]
+    [% IF user_tbl.login_name == user and user_tbl.login_password == pass %]
+        ようこそ<strong>[% user_tbl.user_name %]</strong>さん<br><br>
+        <form method="post" action="/entry/create">
+            <fieldset>
+                <div><textarea name="body" cols="40" rows="10"></textarea></div>
+                <div><button type="submit" class="btn-inverse">投稿</button></div>
+            </fieldset>
+        </form>
+    [% ELSE %]
+    ばーか。
+    [% END # IF %]
+[% END %]
+
+[% END %]
