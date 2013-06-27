@@ -32,6 +32,7 @@
                         <li class="active"><a href="/entry/show_all">Diary</a></li>
                         <li class="divider-vertical"></li>
                         <li><a href="/auth/login">Login</a></li>
+                        <li><a href="/link_page">Link</a></li>
                         <li><a href="/rakugaki">落書き</a></li>
                     </ul>
                 </div>
@@ -44,9 +45,6 @@
         </div>
         <footer class="footer">
             Powered by <a target="_blank" href="http://amon.64p.org/">Amon2</a><br>
-            reference from<a target="_blank" href="http://webgaku.hateblo.jp/entry/20120919/1348047766">bootstrap盛り合わせ</a><br>
-            reference from<a target="_blank" href="http://w.builwing.info/2012/08/14/%E3%81%93%E3%82%8C%E3%81%A0%E3%81%91%E8%A6%9A%E3%81%88%E3%82%8C%E3%81%B0%E8%AA%B0%E3%81%A7%E3%82%82%E4%BD%BF%E3%81%88%E3%82%8Btwitterbootstrap2-0/">これだけ覚えれば</a><br>
-            and also<a target="_blank"  href="http://homepage2.nifty.com/t_ishii/site/html5game/p3_0.html">HTML5ゲーム</a>
         </footer>
     </div>
 </body>

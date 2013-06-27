@@ -13,4 +13,9 @@ sub rakugaki {
     $c->render('rakugaki.tt');
 }
 
+sub link_page {
+    my ($class, $c) = @_;
+    $c->render('link_page.tt');
+}
+
 1;

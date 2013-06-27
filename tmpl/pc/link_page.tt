@@ -1,0 +1,35 @@
+[% WRAPPER 'include/layout.tt' %]
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span9">
+      <h4>作家</h4>
+      <dl>
+        <dt><a target="_blank" href="http://www.0yenhouse.com/diary/">坂口恭平日記</a></dt>
+        <dd>今一番熱い！坂口大先生日記！<br />菊地日記を超えた！</dd>
+        <dt><a target="_blank" href="http://www.gregegan.net/">Greg Egan's Home Page</a></dt>
+        <dd>現代SF作家の最高峰、グレッグ・イーガンの公式サイト。<br />作品の解説の他に、小説中に現れる様々なアイデア（例：量子サッカー）のデモも見れる。<br />（現代SFってなんだ？？サイバーパンクは近代なのか？？？）</dd>
+        <dt><a target="_blank" href="https://www.google.co.jp/url?sa=t&rct=j&q=&esrc=s&source=web&cd=4&cad=rja&ved=0CD0QFjAD&url=http%3A%2F%2Fwww.infinityplus.co.\
+uk%2Fstories%2FI_Remember_Pallahaxi.pdf&ei=K9XLUZqiGpGgiQezu4DAAg&usg=AFQjCNFVC_QtKlL32m1jBatQv-kT8OlXWg">I Remember Pallahaxi</a></dt>
+        <dd>カナダの誇る恋愛SF作家マイクル・コニイ大先生の最終作にして名作「ハローサマー、グッドバイ」の続編「I Remember Pallahaxi」が、第一章だけネットに公開されている。<br />2009年刊行予定と噂のあった日本語訳の出版はいったい…。</dd>
+        <dt><a target="_blank" href="http://andymente.moo.jp/">あばたえくぼ（旧まおうせい）</a></dt>
+        <dt><a target="_blank" href="http://andymente.blog.fc2.com/">セドナ</a></dt>
+        <dd>日本の誇る恋愛小説家にしてカリスマゲームクリエイター泉和良大先生のセーフエリア。</dd>
+      </dl>
+      <h4>技術</h4>
+      <dl>
+        <dt>amon2</dt>
+        <dd><a target="_blank" href="http://amon.64p.org/">Amon2</a></dd>
+        <dd><a target="_blank" href="http://blog.64p.org/archive/category/Amon2%E5%85%A5%E9%96%80">"Amon2入門" - Archive - tokuhirom's</a></dd>
+        <dt>twitter bootstrap</dt>
+        <dd><a target="_blank" href="http://webgaku.hateblo.jp/entry/20120919/1348047766">Twitter Bootstrapのサンプル盛り合わせ</a></dd>
+        <dd><a target="_blank" href="http://w.builwing.info/2012/08/14/%E3%81%93%E3%82%8C%E3%81%A0%E3%81%91%E8%A6%9A%E3%81%88%E3%82%8C%E3%81%B0%E8%AA%B0%E3%81%A7%E3%82%82%E4%BD%BF%E3%81%88%E3%82%8Btwitterbootstrap2-0/">これだけ覚えれば誰でも使えるTwitter Bootstrap2.0</a></dd>
+        <dt>html5 javascript</dt>
+        <dd><a target="_blank" href="http://homepage2.nifty.com/t_ishii/site/html5game/p3_0.html">初めてのHTML5ゲーム作成</a></dd>
+      </dl>
+    </div>
+    <div class="span3">
+    </div>
+  </div>
+</div>
+[% END %]
