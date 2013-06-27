@@ -1,0 +1,44 @@
+[% WRAPPER 'include/layout.tt' %]
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span8">
+      <div class="entry-unit">
+[% FOR entry IN entries %]
+        <hr />
+        <strong>[% entry.ctime_obj.strftime('%Y-%m-%d(%a) %H:%M') %]</strong><br /><br />[% mark_raw(entry.body) %]<br /><br />
+[% END %]
+      </div>
+    </div>
+    <div class="span1"><div class="test"></div></div>
+    <div class="span3">
+      <div class="well sidebar-nav">
+        <div class="nav-header">アーカイブ</div>
+        <div class="accordion" id="accordion2">
+[% FOR year IN years %]
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">[% year %]年</a>
+            </div>
+[% IF year == years[0] %]
+            <div id="collapseOne" class="accordion-body collapse in">
+[% ELSE %]
+            <div id="collapseOne" class="accordion-body collapse">
+[% END %]
+              <div class="accordion-inner">
+[% FOR month IN months %]
+                <a href="[% uri_for('/entry/show_month',{ year => year, month => month }) %]">[% year %]年[% month %]月</a><br />
+[% END %]
+              </div>
+            </div>
+          </div>
+[% END %]
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+[% INCLUDE 'include/pager.tt' WITH pager=pager %]
+
+[% END %]

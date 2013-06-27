@@ -1,0 +1,19 @@
+[% WRAPPER 'include/layout.tt' %]
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span9">
+      <div class="entry-unit">
+[% FOR entry IN entries %]
+        <hr />
+        <strong>[% entry.ctime_obj.strftime('%Y-%m-%d(%a) %H:%M') %]</strong><br /><br />[% mark_raw(entry.body) %]<br /><br />
+[% END %]
+      </div>
+    </div>
+    <div class="span3"><div class="test"></div></div>
+  </div>
+</div>
+
+[% INCLUDE 'include/pager.tt' WITH pager=pager %]
+
+[% END %]
