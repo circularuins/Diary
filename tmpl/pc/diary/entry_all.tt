@@ -2,15 +2,23 @@
 
 <div class="container-fluid">
   <div class="row-fluid">
-    <div class="span8">
+    <div class="span7">
       <div class="entry-unit">
 [% FOR entry IN entries %]
         <hr />
-        <strong>[% entry.ctime_obj.strftime('%Y-%m-%d(%a) %H:%M') %]</strong><br /><br />[% mark_raw(entry.body) %]<br /><br />
+        <strong>[% entry.ctime_obj.strftime('%Y-%m-%d(%a) %H:%M') %]</strong>
+[% IF entry.author_name == "楽太郎" %]
+          <span class="badge badge-info">[% entry.author_name %]</span><br /><br />
+[% ELSIF entry.author_name == "裸の太陽" %]
+          <span class="badge badge-important">[% entry.author_name %]</span><br /><br />
+[% ELSIF entry.author_name == "税務官X" %]
+          <span class="badge badge-success">[% entry.author_name %]</span><br /><br />
+[% END %]
+          [% mark_raw(entry.body) %]<br /><br />
 [% END %]
       </div>
     </div>
-    <div class="span1"><div class="space"></div></div>
+    <div class="span2"><div class="space"></div></div>
     <div class="span3">
       <div class="well sidebar-nav">
         <div class="nav-header">アーカイブ</div>

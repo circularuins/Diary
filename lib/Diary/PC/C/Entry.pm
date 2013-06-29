@@ -8,11 +8,13 @@ use Data::Dumper;
 
 sub create {
     my ($class, $c) = @_;
+print Dumper $c;
     if (my $body = $c->request->param('body')) {
         $body =~ s%\n%<br />%g;
         $c->db->insert(
             'entry' => {
                 body => $body,
+                author_name => $c->request->param('user_name'),
             }
         );
     }
