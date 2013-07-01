@@ -8,7 +8,6 @@ use Data::Dumper;
 
 sub create {
     my ($class, $c) = @_;
-print Dumper $c;
     if (my $body = $c->request->param('body')) {
         $body =~ s%\n%<br />%g;
         $c->db->insert(
@@ -38,7 +37,7 @@ sub show_all {
         push(@months, $tmp);
     }
 
-    $c->render('diary/entry_all.tt', { entries => $entries, pager => $pager, years => \@years, months => \@months });
+    $c->render('diary/entry.tt', { entries => $entries, pager => $pager, years => \@years, months => \@months, type => "all" });
 }
 
 sub show_month {
@@ -59,7 +58,7 @@ sub show_month {
     my $page = $c->req->param('page') || 1;
     my ($entries, $pager) = $c->db->search_with_pager('entry', ['ctime',{'between' => [$epoch_from,$epock_to]}], {order_by => 'ctime DESC', page => $page, rows => 5});
 
-    $c->render('diary/entry_month.tt', { entries => $entries, pager => $pager });
+    $c->render('diary/entry.tt', { entries => $entries, pager => $pager, type => "month" });
 }
 
 1;

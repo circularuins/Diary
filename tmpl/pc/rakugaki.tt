@@ -5,4 +5,7 @@
   <font size="10" color="deeppink">≡≡≡≡≡≡≡≡≡≡;</font>
 </marquee>
 
+<img src="[% uri_for('/static/test.jpg') %]">
+<img src="http://livedoor.blogimg.jp/chihhylove/imgs/5/0/50b46b8a-s.jpg">
+
 [% END %]
