@@ -20,6 +20,24 @@ sub create {
     return $c->redirect('/entry/show_all');
 }
 
+sub update {
+    my ($class, $c) = @_;
+    if (my $body = $c->request->param('body')) {
+        my $id = $c->request->param('id');
+#        $body =~ s%\n%<br />%g;
+        my $now = time;
+        $c->db->update(
+            'entry' => {
+                body => $body,
+                utime => $now,
+            }, {
+                id => $id,
+            }
+        );
+    }
+    return $c->redirect('/entry/show_all');
+}
+
 sub show_all {
     my ($class, $c) = @_;
     my $page = $c->req->param('page') || 1;
