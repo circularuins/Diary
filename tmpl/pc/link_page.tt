@@ -28,6 +28,8 @@ uk%2Fstories%2FI_Remember_Pallahaxi.pdf&ei=K9XLUZqiGpGgiQezu4DAAg&usg=AFQjCNFVC_
         <dd><a target="_blank" href="http://greenapple-room.com/conc/user/TwitterBootstrap/bootstrap.html">Twitter Bootstrapの使い方</a></dd>
         <dt>html5 javascript</dt>
         <dd><a target="_blank" href="http://homepage2.nifty.com/t_ishii/site/html5game/p3_0.html">初めてのHTML5ゲーム作成</a></dd>
+        <dt>環境構築</dt>
+        <dd><a target="_blank" href="http://wata-jp.ldblog.jp/archives/1674163.html">Apache、mod_perl さようなら！さくらVPSで Nginx + Starman</a></dd>
       </dl>
     </div>
     <div class="span3">

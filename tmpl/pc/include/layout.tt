@@ -8,7 +8,9 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
     <meta name="format-detection" content="telephone=no" />
     <script src="[% uri_for('/static/js/jquery-1.10.0.min.js') %]"></script>
+<meta name="viewport" content="width=device-width,minimum-scale=1">
     <link href="[% uri_for('/static/bootstrap/css/bootstrap.css') %]" rel="stylesheet" type="text/css" />
+    <link href="[% uri_for('/static/bootstrap/css/bootstrap-responsive.css') %]" rel="stylesheet" type="text/css" />
     <script src="[% uri_for('/static/bootstrap/js/bootstrap.js') %]"></script>
     <script src="[% uri_for('/static/js/es5-shim.min.js') %]"></script>
     <script src="[% uri_for('/static/js/micro_template.js') %]"></script>
@@ -22,29 +24,30 @@
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
-<body[% IF bodyID %] id="[% bodyID %]"[% END %]>
-    <div class="navbar navbar-fixed-top navbar-inverse">
-        <div class="navbar-inner">
-            <div class="container">
-                <a class="brand" href="/">heaven</a>
-                <div class="nav-collapse">
-                    <ul class="nav">
-                        <li class="active"><a href="/entry/show_all">Diary</a></li>
-                        <li class="divider-vertical"></li>
-                        <li><a href="/auth/login">Login</a></li>
-                        <li><a href="/link_page">Link</a></li>
-                        <li><a href="/rakugaki">落書き</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div><!-- /.navbar-inner -->
-    </div><!-- /.navbar -->
-    <div class="container">
+    <body[% IF bodyID %] id="[% bodyID %]"[% END %]>
+	  <div class="navbar navbar-fixed-top navbar-inverse">
+		<div class="navbar-inner">
+		  <div class="container-fluid">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+			<a class="brand" href="/">heaven</a>
+			<div class="nav-collapse">
+			  <ul class="nav">
+                <li class="active"><a href="/entry/show_all">Diary</a></li>
+                <li class="divider-vertical"></li>
+                <li><a href="/auth/login">Login</a></li>
+                <li><a href="/link_page">Link</a></li>
+                <li><a href="/rakugaki">落書き</a></li>
+			  </ul>
+			</div><!--/.nav-collapse -->
+		  </div>
+		</div>
+	  </div>
+      <div class="container">
         <div id="main">
-            [% content %]
+          [% content %]
         </div>
         <footer class="footer">
-            Powered by <a target="_blank" href="http://amon.64p.org/">Amon2</a><br>
+          Powered by <a target="_blank" href="http://amon.64p.org/">Amon2</a><br>
         </footer>
     </div>
 </body>
