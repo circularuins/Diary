@@ -43,6 +43,8 @@ sub show_all {
     my $page = $c->req->param('page') || 1;
     my ($entries, $pager) = $c->db->search_with_pager('entry' => {}, {order_by => 'ctime DESC', page => $page, rows => 5});
 
+    # サイドバーに表示する年月の取得
+    # SQLで月ごとの件数をcountして、1以上の月のみ、年月：(件数)という感じのハッシュ配列をつくる。ほんでそれを↓の代わりに渡して、表示させる。
     my ($sec,$min,$hour,$mday,$month,$year,$wday,$stime) = localtime(time());
     $year += 1900;
     $month += 1;

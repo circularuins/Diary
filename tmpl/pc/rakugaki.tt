@@ -5,6 +5,6 @@
   <font size="10" color="deeppink">≡≡≡≡≡≡≡≡≡≡;</font>
 </marquee>
 
-<img src="[% uri_for('/static/img/test.jpg') %]">
+<img src="[% uri_for('/static/img/test.jpg') %]" width="100" height="100">
 
 [% END %]

@@ -1,5 +1,16 @@
 [% WRAPPER 'include/layout.tt' %]
 
-top
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12">
+      <div align="center">
+        <img src="[% uri_for('/static/img/heven.jpg') %]">
+      </div>
+      <div align="center">
+        <img src="[% uri_for('/static/img/raku_2010.jpg') %]" width="80" height="80">
+      </div>
+    </div>
+  </div>
+</div>
 
 [% END %]

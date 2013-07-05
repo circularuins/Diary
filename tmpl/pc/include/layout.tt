@@ -32,11 +32,15 @@
         <a class="brand" href="/">heaven</a>
         <div class="nav-collapse">
           <ul class="nav">
-            <li class="active"><a href="/entry/show_all">Diary</a></li>
             <li class="divider-vertical"></li>
-            <li><a href="/auth/login">Login</a></li>
-            <li><a href="/link_page">Link</a></li>
+            <li class="active"><a href="/entry/show_all">Blog</a></li>
+            <li><a href="/auth/login">投稿する</a></li>
+            <li><a href="/link_page">リンク集</a></li>
             <li><a href="/rakugaki">落書き</a></li>
+            <li class="divider-vertical"></li>
+            <form class="navbar-search pull-left">
+              <input type="text" class="search-query" placeholder="Search">
+            </form>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
