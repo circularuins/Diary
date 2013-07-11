@@ -29,8 +29,6 @@ sub check_login {
         my $id = $c->request->param('id');;    
         my $entry = $c->db->single('entry', {'id' => $id});
         if ($user_tbl->{row_data}->{user_name} eq $entry->{row_data}->{author_name}) {
-print Dumper $user_tbl->{row_data}->{login_name};
-print Dumper $user;
             $c->render('diary/update_entry.tt', { entry => $entry, user_tbl => $user_tbl });
         }
         else {

@@ -38,8 +38,14 @@
             <li><a href="/link_page">リンク集</a></li>
             <li><a href="/rakugaki">落書き</a></li>
             <li class="divider-vertical"></li>
-            <form class="navbar-search pull-left">
-              <input type="text" class="search-query" placeholder="Search">
+            <form class="navbar-search pull-left" method="post" action="/search/search_for_all" autocomplete="on">
+              <div class="input-append">
+                <input name="search_word" id="appendedInputButtons" size="16" type="text"  placeholder="検索キーワードを入力">
+                <button class="btn btn-primary" type="submit">
+                  <i class="icon-search icon-white"></i>
+                  Search
+                </button>
+              </div>
             </form>
           </ul>
         </div><!--/.nav-collapse -->
