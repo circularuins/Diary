@@ -6,9 +6,11 @@ use Data::Dumper;
 
 sub search_for_all {
     my ($class, $c) = @_;
-    my $search_word = "%" . $c->request->param('search_word') . "%";
+    my $search_word = $c->request->param('search_word');
+    my $search_word_modify = "%" . $search_word . "%";
     my $page = $c->req->param('page') || 1;
-    my ($entries, $pager) = $c->db->search_with_pager('entry', ['body',{'like' => $search_word}], {order_by => 'ctime DESC', page => $page, rows => 5});
+    my @entries = $c->db->search('entry', ['body',{'like' => $search_word_modify}], {order_by => 'ctime DESC'});
+    my $count_entries = @entries;
 
     my ($sec,$min,$hour,$mday,$month,$year,$wday,$stime) = localtime(time());
     $year += 1900;
@@ -22,7 +24,7 @@ sub search_for_all {
         push(@months, $tmp);
     }
 
-    $c->render('diary/entry.tt', { entries => $entries, years => \@years, months => \@months, type => "all" });
+    $c->render('diary/entry.tt', { entries => \@entries, years => \@years, months => \@months, type => "all", search_word => $search_word, count_entries => $count_entries });
 }
 
 1;

@@ -7,4 +7,13 @@
 
 <img src="[% uri_for('/static/img/test.jpg') %]" width="100" height="100">
 
+<div id="lunyu-4-9">
+  <p class="ja">
+    子曰く、士、道に志して、悪衣悪食を恥ずるものは、未だ与に議るに足らざるなり。
+  </p>
+  <p class="cn">
+    子曰、士志於道、而恥悪衣悪食者、未足與議也。
+  </p>
+</div>
+
 [% END %]
