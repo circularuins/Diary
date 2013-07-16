@@ -1,0 +1,11 @@
+.navbar-fixed-top {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 979px){
+    body{
+        padding-top: 70px;
+    }
+}
