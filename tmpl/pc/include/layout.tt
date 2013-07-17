@@ -38,12 +38,13 @@
             <li class="divider-vertical"></li>
             <li class="active"><a href="/entry/show_all">Blog</a></li>
             <li><a href="/auth/login">投稿する</a></li>
+            <li><a href="/book/show_list">Book</a></li>
             <li><a href="/link_page">リンク集</a></li>
             <li><a href="/rakugaki">落書き</a></li>
             <li class="divider-vertical"></li>
             <form class="navbar-search pull-left" method="post" action="/search/search_for_all" autocomplete="on">
               <div class="input-append">
-                <input name="search_word" id="appendedInputButtons" size="16" type="text"  placeholder="検索キーワードを入力">
+                <input name="search_word" id="appendedInputButtons" size="16" type="text"  placeholder="ブログを検索">
                 <button class="btn btn-primary" type="submit">
                   <i class="icon-search icon-white"></i>
                   Search
