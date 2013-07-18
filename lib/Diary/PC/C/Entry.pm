@@ -50,11 +50,18 @@ sub show_all {
     $month += 1;
     my @years;
     my @months;
-    for (my $tmp = $year ; $tmp >= 2011 ; $tmp--) {
+    for (my $tmp = $year ; $tmp >= 2013 ; $tmp--) {
         push(@years, $tmp);
     }
-    for (my $tmp = $month ; $tmp >= 1 ; $tmp--) {
-        push(@months, $tmp);
+    if ($year == 2013) {
+        for (my $tmp = $month ; $tmp >= 6 ; $tmp--) {
+            push(@months, $tmp);
+        }
+    }
+    else {
+        for (my $tmp = $month ; $tmp >= 1 ; $tmp--) {
+            push(@months, $tmp);
+        }
     }
 
     $c->render('diary/entry.tt', { entries => $entries, pager => $pager, years => \@years, months => \@months, type => "all" });
