@@ -19,9 +19,9 @@ window.onload = function() {
     core.onload = function() {
 
         //ゲームのメイン処理
-        var player = new Sprite(40, 40);
+        var player = new Sprite(128, 96);
         player.image = core.assets['chara1.png'];
-        player.frame = 3;
+        player.frame = 0;
         player.x = 120;
         player.y = 50;
 
@@ -32,6 +32,11 @@ window.onload = function() {
             if (core.input.right) this.x += 4;
             if (core.input.up) this.y -= 4;
             if (core.input.down) this.y += 4;
+        });
+
+        player.addEventListener('touchmove', function(e) {
+            this.x = e.x - this.width / 2;
+            this.y = e.y - this.height / 2;
         });
 
     }
