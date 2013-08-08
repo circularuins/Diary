@@ -10,9 +10,12 @@
     <script src="[% uri_for('/static/js/jquery-1.10.0.min.js') %]"></script>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <link href="[% uri_for('/static/bootstrap/css/bootstrap.css') %]" rel="stylesheet" type="text/css" />
+    <!--スマフォ用の bootstrap -->
     <link href="[% uri_for('/static/bootstrap/css/bootstrap-responsive.css') %]" rel="stylesheet" type="text/css" />
+    <!-- bootstrapに独自クラスを追加 -->
     <link href="[% uri_for('/static/bootstrap/css/bootstrap-custom.css') %]" rel="stylesheet" type="text/css" />
     <link href="[% uri_for('/static/bootstrap/css/bootstrap-responsive-custom.css') %]" rel="stylesheet" type="text/css" />
+
     <script src="[% uri_for('/static/bootstrap/js/bootstrap.js') %]"></script>
     <script src="[% uri_for('/static/js/es5-shim.min.js') %]"></script>
     <script src="[% uri_for('/static/js/micro_template.js') %]"></script>
@@ -20,7 +23,11 @@
     <script src="[% uri_for('/static/js/sprintf-0.7-beta1.js') %]"></script>
     <script src="[% uri_for('/static/js/micro-location.js') %]"></script>
     <script src="[% uri_for('/static/js/micro_dispatcher.js') %]"></script>
+    <!-- 検索結果ハイライトの為のプラグイン -->
     <script src="[% uri_for('/static/js/entry_util.js') %]"></script>
+    <script src="[% uri_for('/static/js/jquery.highlight-4.js') %]"></script>
+    <script src="[% uri_for('/static/js/search_highlight.js') %]"></script>
+
     <link href="[% static_file('/static/css/main.css') %]" rel="stylesheet" type="text/css" media="screen" />
     <script src="[% static_file('/static/js/main.js') %]"></script>
     <!--[if lt IE 9]>

@@ -54,7 +54,7 @@ sub show_all {
         push(@years, $tmp);
     }
     if ($year == 2013) {
-        for (my $tmp = $month ; $tmp >= 6 ; $tmp--) {
+        for (my $tmp = $month ; $tmp >= 5 ; $tmp--) {
             push(@months, $tmp);
         }
     }

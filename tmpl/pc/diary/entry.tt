@@ -7,6 +7,7 @@
       <div class="seach-info">
         <strong>[% search_word %]</strong>：<strong>[% count_entries %]</strong>件
       </div>
+      <div id="search_word" hidden>[% search_word %]</div>
 [% END %]
       <div class="entry-unit">
 [% FOR entry IN entries %]<!-- FOR -->

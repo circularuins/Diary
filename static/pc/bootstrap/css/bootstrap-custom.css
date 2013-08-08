@@ -20,3 +20,7 @@ font-family:Arial, Helvetica, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic
 font-size: 14px;
 line-height: 175%;
 }
+
+
+/* 検索結果ハイライト*/
+.highlight { background-color: yellow }
