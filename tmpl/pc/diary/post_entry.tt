@@ -7,6 +7,7 @@
       <form method="post" action="/entry/create">
         <fieldset>
           <input type="hidden" name="user_name" value="[% user_tbl.user_name %]">
+          <div><input type="text" name="title" size="30" maxlength="100" placeholder="無題"></div>
           <div><textarea name="body" cols="40" rows="10"></textarea></div>
           <div><button type="submit" class="btn-inverse">投稿</button></div>
         </fieldset>

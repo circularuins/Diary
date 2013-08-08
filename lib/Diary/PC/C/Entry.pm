@@ -10,12 +10,24 @@ sub create {
     my ($class, $c) = @_;
     if (my $body = $c->request->param('body')) {
         $body =~ s%\n%<br />%g;
-        $c->db->insert(
-            'entry' => {
-                body => $body,
-                author_name => $c->request->param('user_name'),
-            }
-        );
+        if (my $title = $c->request->param('title')) {
+            $c->db->insert(
+                'entry' => {
+                    title => $title,
+                    body => $body,
+                    author_name => $c->request->param('user_name'),
+                }
+            );
+        }
+        else {
+            $c->db->insert(
+                'entry' => {
+                    title => '無題',
+                    body => $body,
+                    author_name => $c->request->param('user_name'),
+                }
+            );
+        }
     }
     return $c->redirect('/entry/show_all');
 }
@@ -26,14 +38,28 @@ sub update {
         my $id = $c->request->param('id');
 #        $body =~ s%\n%<br />%g;
         my $now = time;
-        $c->db->update(
-            'entry' => {
-                body => $body,
-                utime => $now,
-            }, {
-                id => $id,
-            }
-        );
+        if (my $title = $c->request->param('title')) {
+            $c->db->update(
+                'entry' => {
+                    title => $title,
+                    body => $body,
+                    utime => $now,
+                }, {
+                    id => $id,
+                }
+            );
+        }
+        else {
+            $c->db->update(
+                'entry' => {
+                    title => '無題',
+                    body => $body,
+                    utime => $now,
+                }, {
+                    id => $id,
+                }
+            );
+        }
     }
     return $c->redirect('/entry/show_all');
 }
