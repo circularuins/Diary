@@ -8,7 +8,6 @@ sub search_for_all {
     my ($class, $c) = @_;
     my $search_word = $c->request->param('search_word');
     my $search_word_modify = "%" . $search_word . "%";
-    my $page = $c->req->param('page') || 1;
     my @entries = $c->db->search('entry', ['body',{'like' => $search_word_modify}], {order_by => 'ctime DESC'});
     my $count_entries = @entries;
 
