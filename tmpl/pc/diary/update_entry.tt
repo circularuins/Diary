@@ -8,7 +8,7 @@
         <fieldset>
           <input type="hidden" name="id" value="[% entry.id %]">
           <div><input type="text" name="title" size="30" maxlength="100" value="[% entry.title %]"></div>
-          <div><textarea name="body" cols="40" rows="10">[% entry.body %]</textarea></div>
+          <div><textarea name="body" cols="40" rows="10" data-widearea="enable">[% entry.body %]</textarea></div>
           <div><button type="submit" class="btn-inverse">投稿</button></div>
         </fieldset>
       </form>

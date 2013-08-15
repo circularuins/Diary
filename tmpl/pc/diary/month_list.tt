@@ -16,7 +16,6 @@
 [% END %]<!-- IF END -->
         <div align="right">
           <a href="[% uri_for('/entry/show_single',{ id => entry.id }) %]">【[% entry.title %]】</a>
-          <a href="[% uri_for('/auth/login',{ id => entry.id, type => "update" }) %]">編集<i class="icon-pencil"></i></a>
         </div>
 [% END %]<!-- FOR END -->
       </div>

@@ -16,6 +16,6 @@
   </p>
 </div>
 
-<a href="[% uri_for('/static/game/index.html') %]">test1</a>
-
+<a href="[% uri_for('/static/game/index.html') %]">game1</a>
+<a href="[% uri_for('/static/study/sandbox.html') %]">study1</a>
 [% END %]
