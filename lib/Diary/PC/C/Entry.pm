@@ -9,7 +9,7 @@ use Data::Dumper;
 sub create {
     my ($class, $c) = @_;
     if (my $body = $c->request->param('body')) {
-        $body =~ s%\n%<br />%g;
+        $body =~ s%\r\n%<br />%g;
         if (my $title = $c->request->param('title')) {
             $c->db->insert(
                 'entry' => {
@@ -36,7 +36,7 @@ sub update {
     my ($class, $c) = @_;
     my $id = $c->request->param('id');
     if (my $body = $c->request->param('body')) {
-#        $body =~ s%\n%<br />%g;
+        $body =~ s%\r\n%<br />%g;
         my $now = time;
         if (my $title = $c->request->param('title')) {
             $c->db->update(

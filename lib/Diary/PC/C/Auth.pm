@@ -28,6 +28,7 @@ sub check_login {
     if ($type eq "update") {
         my $id = $c->request->param('id');;    
         my $entry = $c->db->single('entry', {'id' => $id});
+        $entry->{row_data}->{body} =~ s%<br />%\r\n%g;
         if ($user_tbl->{row_data}->{user_name} eq $entry->{row_data}->{author_name}) {
             $c->render('diary/update_entry.tt', { entry => $entry, user_tbl => $user_tbl });
         }
