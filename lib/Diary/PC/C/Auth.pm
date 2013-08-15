@@ -9,7 +9,7 @@ sub login {
     my $param = $c->{request}->{env}->{QUERY_STRING};
     my ($type) = $param =~ /type=(\w+)/;
 
-    if ($type eq "update") {
+    if ($type eq "update" || $type eq "delete") {
         my ($id) = $param =~ /id=(\d+)/;
         $c->render('login.tt', { id => $id, type => $type });
     }
@@ -34,7 +34,18 @@ sub check_login {
         }
         else {
             $c->render('error.tt');
-        }    }
+        }
+    }
+    elsif ($type eq "delete") {
+        my $id = $c->request->param('id');;    
+        my $entry = $c->db->single('entry', {'id' => $id});
+        if ($user_tbl->{row_data}->{user_name} eq $entry->{row_data}->{author_name}) {
+            $c->render('diary/delete_confirm.tt', { id => $id });
+        }
+        else {
+            $c->render('error.tt');
+        }
+    }
     else {
         if ($user_tbl) {
             $c->render('diary/post_entry.tt', { user_tbl => $user_tbl });

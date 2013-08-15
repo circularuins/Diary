@@ -66,6 +66,13 @@ sub update {
     return $c->redirect($url);
 }
 
+sub delete_entry {
+    my ($class, $c) = @_;
+    my $id = $c->request->param('id');
+    $c->db->delete('entry', {'id' => $id});
+    return $c->redirect('/entry/show_all');
+}
+
 sub show_all {
     my ($class, $c) = @_;
     my $page = $c->req->param('page') || 1;
