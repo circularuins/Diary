@@ -17,6 +17,7 @@
 </div>
 
 <script type="text/javascript">
-  wideArea().clearData(1);;
+  wideArea().clearData(1);
+  wideArea().setOption("defaultColorScheme", "dark");
 </script>
 [% END %]

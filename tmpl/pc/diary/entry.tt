@@ -9,28 +9,29 @@
       </div>
       <div id="search_word" hidden>[% search_word %]</div>
 [% END %]
-      <div class="entry-unit">
+      <div class="entries">
 [% FOR entry IN entries %]<!-- FOR -->
-        <hr />
-        <div class="row-fluid">
-          <div class="span4">
-            <strong>[% entry.ctime_obj.strftime('%Y-%m-%d(%a) %H:%M') %]</strong>
+        <div class="entry-unit">
+          <div class="row-fluid">
+            <div class="span6">
+              <p class="date-font">[% entry.ctime_obj.strftime('%Y-%m-%d(%a) %H:%M') %]</p>
 [% IF entry.author_name == "楽太郎" %]<!-- IF -->
-            <span class="badge badge-info">[% entry.author_name %]</span><br /><br />
+              <span class="badge badge-info">[% entry.author_name %]</span><br /><br />
 [% ELSIF entry.author_name == "裸の太陽" %]
-            <span class="badge badge-important">[% entry.author_name %]</span><br /><br />
+              <span class="badge badge-important">[% entry.author_name %]</span><br /><br />
 [% ELSIF entry.author_name == "税務官X" %]
-            <span class="badge badge-success">[% entry.author_name %]</span><br /><br />
+              <span class="badge badge-success">[% entry.author_name %]</span><br /><br />
 [% END %]<!-- IF END -->
+            </div>
+            <div class="span4">
+              <a href="[% uri_for('/auth/login',{ id => entry.id, type => "update" }) %]">編集<i class="icon-pencil"></i></a>
+              <a href="[% uri_for('/auth/login',{ id => entry.id, type => "delete" }) %]">消去<i class="icon-remove"></i></a>
+            </div>
           </div>
-          <div class="span4">
-            <a href="[% uri_for('/auth/login',{ id => entry.id, type => "update" }) %]">編集<i class="icon-pencil"></i></a>
-            <a href="[% uri_for('/auth/login',{ id => entry.id, type => "delete" }) %]">消去<i class="icon-remove"></i></a>
-          </div>
+          <a href="[% uri_for('/entry/show_single',{ id => entry.id }) %]">【[% entry.title %]】</a>
+          <article class="honnbun">[% mark_raw(entry.body) %]</article>
         </div>
-        <a href="[% uri_for('/entry/show_single',{ id => entry.id }) %]">【[% entry.title %]】</a>
-        <article class="honnbun">[% mark_raw(entry.body) %]</article>
-        <br /><br />
+        <br />
 [% END %]<!-- FOR END -->
       </div>
     </div>

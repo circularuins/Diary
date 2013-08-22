@@ -3,7 +3,7 @@
 <div class="container-fluid" id="blog">
   <div class="row-fluid">
     <div class="span7">
-      <div class="entry-unit">
+      <div class="entries">
 [% FOR entry IN entries %]<!-- FOR -->
         <hr />
         <strong>[% entry.ctime_obj.strftime('%m-%d(%a) %H:%M') %]</strong>
