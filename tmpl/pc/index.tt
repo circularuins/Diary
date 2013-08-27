@@ -9,6 +9,9 @@
       <div align="center">
         <img src="[% uri_for('/static/img/raku_2010.jpg') %]" width="80" height="80">
       </div>
+      <div align="right" id="counter">
+        <!--タグはここから--><table border="0" cellspacing="0" cellpadding="0"><tr><td align="center"><a href="http://www.rays-counter.com/"><img src="http://www.rays-counter.com/d227_f6_022/52157762e306f/" alt="アクセスカウンター" border="0"></a></td></tr><tr><td align="center"><img src="http://www.rays-counter.com/images/counter_01.gif" border="0"><a href="http://pre-diet.com/"><img src="http://www.rays-counter.com/images/counter_02.gif" border="0" alt="ダイエットサプリ"></a><img src="http://www.rays-counter.com/images/counter_03.gif" border="0"><a href="http://e-pierced.net/"><img src="http://www.rays-counter.com/images/counter_04.gif" border="0" alt="ピアス通販"></a><a href="http://kaitori-search.net/"><img src="http://www.rays-counter.com/images/counter_05.gif" border="0" alt="ブランド買取サーチ"></a></td></tr></table><!--ここまで-->
+      </div>
     </div>
   </div>
 </div>

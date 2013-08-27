@@ -2,7 +2,7 @@
 
 <div class="container-fluid" id="blog">
   <div class="row-fluid">
-    <div class="span7">
+    <div class="span9">
 [% IF search_word %]
       <div class="seach-info">
         <strong>[% search_word %]</strong>：<strong>[% count_entries %]</strong>件
@@ -35,7 +35,6 @@
 [% END %]<!-- FOR END -->
       </div>
     </div>
-    <div class="span2"><div class="space"></div></div>
     <div class="span3">
       <div class="well sidebar-nav">
         <div class="nav-header">アーカイブ</div>

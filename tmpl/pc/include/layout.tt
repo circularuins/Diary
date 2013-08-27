@@ -33,6 +33,10 @@
     <script src="[% uri_for('/static/js/jquery.highlight-4.js') %]"></script>
     <script src="[% uri_for('/static/js/search_highlight.js') %]"></script>
 
+    <!-- コードシンタックスハイライト -->
+    <script src="[% uri_for('/static/js/prettify.js') %]"></script>
+    <link href="[% static_file('/static/css/prettify.css') %]" rel="stylesheet" type="text/css" />
+
     <link href="[% static_file('/static/css/main.css') %]" rel="stylesheet" type="text/css" media="screen" />
     <script src="[% static_file('/static/js/main.js') %]"></script>
 
@@ -40,7 +44,7 @@
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
-<body[% IF bodyID %] id="[% bodyID %]"[% END %]>
+<body[% IF bodyID %] id="[% bodyID %]"[% END %] onload="prettyPrint()">
   <div class="navbar navbar-fixed-top navbar-inverse">
     <div class="navbar-inner">
       <div class="container-fluid">

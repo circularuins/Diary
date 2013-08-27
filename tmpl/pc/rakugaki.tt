@@ -18,4 +18,5 @@
 
 <a href="[% uri_for('/static/game/index.html') %]">game1</a>
 <a href="[% uri_for('/static/study/sandbox.html') %]">study1</a>
+<a href="[% uri_for('/static/study/webgl/three_test.html') %]">three_test1</a>
 [% END %]

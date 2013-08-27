@@ -27,15 +27,18 @@ p.date-font {
 
 /* http://www.htmq.com/css3/border-radius.shtmlを参考 */
 div.entry-unit {
-  border:solid 12px #7fcfe2;
+  border:solid 8px #E4D3A2;
   border-radius: 25px 25px 25px 25px / 25px 25px 25px 25px;
   color: #333333;
-  background-color: #FFFACD;
+  background-color: #FFFFE0;
 }
 
 pre {
-  margin: 20px;
+  margin: 10px;
   background-color: #f9f9f9;
+  font-size: 16px;
+  overflow: auto;
 }
+
 /* 検索結果ハイライト*/
 .highlight { background-color: yellow }
