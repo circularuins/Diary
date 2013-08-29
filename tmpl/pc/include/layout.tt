@@ -58,6 +58,7 @@
             <li><a href="/book/show_list">Book</a></li>
             <li><a href="/link_page">リンク集</a></li>
             <li><a href="/rakugaki">落書き</a></li>
+            <li><a href="http://circularuins.dyndns.org:3002/">Labo</a></li>
             <li class="divider-vertical"></li>
             <form class="navbar-search pull-left" method="post" action="/search/search_for_all" autocomplete="on">
               <div class="input-append">
