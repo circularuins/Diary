@@ -42,3 +42,90 @@ pre {
 
 /* 検索結果ハイライト*/
 .highlight { background-color: yellow }
+
+/* ブログタイトルのデザインサンプル
+http://be-engineer.cpla.jp/?p=508
+*/
+/* サンプル１ */
+#midashi1 {
+  position: relative;
+  color: #000;
+  background:#999;
+  font-size: 20px;
+  line-height: 1;
+  margin: 30px -40px 10px -40px;
+  padding: 15px 5px 10px 40px;
+  box-shadow: 0 1px 3px #777;
+}
+#midashi1:after,#midashi1:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  height: 0;
+  width: 0;
+  border: 5px solid transparent;
+  border-top: 5px solid #333;
+}
+#midashi1:after {
+  left: 0;
+  border-right: 5px solid #333;
+}
+#midashi1:before {
+  right: 0;
+  border-left: 5px solid #333;
+}
+/* サンプル２ */
+#midashi2{
+  position: relative;
+  font-size: 20px;
+  line-height: 1;
+  margin:30px -30px 10px -30px;
+  padding: 15px 5px 10px 20px;
+  border-left: 10px solid #777;
+}
+#midashi2:after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  height: 0;
+  width: 100%;
+  border-bottom: 1px dashed #555;
+}
+/* サンプル３ */
+#midashi3 {
+  position: relative;
+  color: #111;
+  font-size: 18px;
+  line-height: 1;
+  margin: 30px 0 0 0;
+  padding: 14px 5px 10px 10px;
+}
+#midashi3:before {
+  content: "";
+  position: absolute;
+  background: #999;
+  top: 0;
+  left: -5px;
+  height: 12px;
+  width: 12px;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#midashi3:after {
+  content: "";
+  position: absolute;
+  background:#777;
+  top: 15px;
+  left: -10px;
+  height: 8px;
+  width: 8px;
+  -moz-transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+  -o-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  transform: rotate(15deg);
+}

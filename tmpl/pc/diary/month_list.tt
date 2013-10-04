@@ -6,16 +6,18 @@
       <div class="entries">
 [% FOR entry IN entries %]<!-- FOR -->
         <hr />
-        <strong>[% entry.ctime_obj.strftime('%m-%d(%a) %H:%M') %]</strong>
-[% IF entry.author_name == "楽太郎" %]<!-- IF -->
-        <span class="badge badge-info">楽</span>
-[% ELSIF entry.author_name == "裸の太陽" %]
-        <span class="badge badge-important">裸</span>
-[% ELSIF entry.author_name == "税務官X" %]
-        <span class="badge badge-success">税</span>
-[% END %]<!-- IF END -->
+        <div align="left">
+          <a href="[% uri_for('/entry/show_single',{ id => entry.id }) %]" id="midashi3">[% entry.title %]</a>
+        </div>
         <div align="right">
-          <a href="[% uri_for('/entry/show_single',{ id => entry.id }) %]">【[% entry.title %]】</a>
+          <strong>[% entry.ctime_obj.strftime('%m-%d(%a) %H:%M') %]</strong>
+[% IF entry.author_name == "楽太郎" %]<!-- IF -->
+          <span class="badge badge-info">楽</span>
+[% ELSIF entry.author_name == "裸の太陽" %]
+          <span class="badge badge-important">裸</span>
+[% ELSIF entry.author_name == "税務官X" %]
+          <span class="badge badge-success">税</span>
+[% END %]<!-- IF END -->
         </div>
 [% END %]<!-- FOR END -->
       </div>
