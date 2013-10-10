@@ -12,9 +12,29 @@
       <div class="entries">
 [% FOR entry IN entries %]<!-- FOR -->
         <div class="entry-unit">
+          <br />
+          <a href="[% uri_for('/entry/show_single',{ id => entry.id }) %]" id="midashi3">[% entry.title %]</a>
+          <br />
           <div class="row-fluid">
-            <div class="span6">
+            <div class="span4">
               <p class="date-font">[% entry.ctime_obj.strftime('%Y-%m-%d(%a) %H:%M') %]</p>
+            </div>
+            <div class="span8">
+            </div>
+          </div>
+          <article class="honnbun">[% mark_raw(entry.body) %]</article>
+          <br />
+          <div class="row-fluid">
+            <div class="span5">
+            </div>
+            <div class="span5">
+[% IF entry.utime %]
+              <p class="date-font" align="right">更新：[% entry.utime_obj.strftime('%Y-%m-%d(%a) %H:%M') %]</p>
+[% ELSE %]
+              <p class="date-font" align="right">更新：なし</p>
+[% END %]
+            </div>
+            <div class="span2">
 [% IF entry.author_name == "楽太郎" %]<!-- IF -->
               <span class="badge badge-info">[% entry.author_name %]</span><br /><br />
 [% ELSIF entry.author_name == "裸の太陽" %]
@@ -23,14 +43,11 @@
               <span class="badge badge-success">[% entry.author_name %]</span><br /><br />
 [% END %]<!-- IF END -->
             </div>
-            <div class="span4">
-              <a href="[% uri_for('/auth/login',{ id => entry.id, type => "update" }) %]">編集<i class="icon-pencil"></i></a>
-              <a href="[% uri_for('/auth/login',{ id => entry.id, type => "delete" }) %]">消去<i class="icon-remove"></i></a>
-            </div>
           </div>
-          <a href="[% uri_for('/entry/show_single',{ id => entry.id }) %]" id="midashi3">[% entry.title %]</a>
-          <br /><br />
-          <article class="honnbun">[% mark_raw(entry.body) %]</article>
+          <p align="right">
+            <a href="[% uri_for('/auth/login',{ id => entry.id, type => "update" }) %]">編集<i class="icon-pencil"></i></a>
+            <a href="[% uri_for('/auth/login',{ id => entry.id, type => "delete" }) %]">消去<i class="icon-remove"></i></a>
+          </p>
         </div>
         <br />
 [% END %]<!-- FOR END -->

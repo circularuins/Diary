@@ -22,7 +22,7 @@ article {
 }
 
 p.date-font {
-  font: bold large/105% Helvetica;
+  font: bold 100% Helvetica;
 }
 
 /* http://www.htmq.com/css3/border-radius.shtmlを参考 */
@@ -95,7 +95,7 @@ http://be-engineer.cpla.jp/?p=508
 /* サンプル３ */
 #midashi3 {
   position: relative;
-  color: #111;
+  color: #4387e9;
   font-size: 18px;
   line-height: 1;
   margin: 30px 0 0 0;

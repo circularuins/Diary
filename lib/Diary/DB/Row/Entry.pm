@@ -10,4 +10,8 @@ sub ctime_obj {
     return Time::Piece->new($self->ctime);
 }
 
+sub utime_obj {
+    my $self = shift;
+    return Time::Piece->new($self->utime);
+}
 1;
