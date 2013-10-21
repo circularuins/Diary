@@ -46,7 +46,7 @@
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
-<body[% IF bodyID %] id="[% bodyID %]"[% END %] onload="prettyPrint()">
+<body[% IF bodyID %] id="[% bodyID %]"[% END %] onload="prettyPrint()" background="[% uri_for('/static/img/sonbrelo.jpg') %]">
   <div class="navbar navbar-fixed-top navbar-inverse">
     <div class="navbar-inner">
       <div class="container-fluid">
