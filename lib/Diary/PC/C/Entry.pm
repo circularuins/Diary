@@ -144,7 +144,9 @@ sub show_single {
 sub show_month {
     my ($class, $c) = @_;
     my $id = $c->{request}->{env}->{QUERY_STRING};
-    my ($month, $year) = $id =~ /month=(\d{1,2})&year=(\d{4})/;
+#    my ($month, $year) = $id =~ /month=(\d{1,2})&year=(\d{4})/;
+    my ($month) = $id =~ /month=(\d{1,2})/;
+    my ($year) = $id =~ /year=(\d{4})/;
     $year -= 1900;
     $month -= 1;
     my $epoch_from = timelocal(0, 0, 0, 1, $month, $year);
