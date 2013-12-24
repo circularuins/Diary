@@ -1,0 +1,2 @@
+#!/bin/sh
+exec /home/wake/.plenv/shims/start_server --port 8000 --interval 2 -- /home/wake/.plenv/shims/plackup -s Starman -a /home/wake/prd/Diary/app.psgi --workers 10
